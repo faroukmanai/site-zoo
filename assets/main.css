@@ -1,0 +1,156 @@
+@import"bouton.css";
+@import"nav.css";
+@import"banniere.css";
+@import"cartes.css";
+@import"grille.css";
+@import"socialMedia.css";
+@import"logo.css";
+@import"article-image-paragraphes.css";
+@import"texte-image.css";
+@import"swiper.css";
+@import"texte-image.css";
+
+:root {
+    /*============================ */
+	/* = COLORS */
+	/*============================ */
+		--jauneBrun:rgb(179, 179, 23);
+        --jaunePale:rgb(242, 242, 217);
+		--jauneMoinsPale: rgb(209, 209, 174);
+		--vertFonce: rgb(0, 15, 4);
+
+    /*============================ */
+	/* = SPACING */
+	/*============================ */
+		--spacing-pico:      0.1rem;
+		--spacing-nano:      0.3rem;
+		--spacing-micro:     .5rem;
+		/*--- */
+		--spacing-thinnest:  1rem;
+		--spacing-thinner:   1.5rem;
+		--spacing-thin:      2rem;
+		--spacing-broad:     4rem;
+		--spacing-broader:   6rem;
+		--spacing-broadest:  8rem;
+		--spacing-large:     10rem;
+		--spacing-larger:    12rem;
+		--spacing-largest:   16rem;
+		/*--- */
+		--spacing-mega:      24rem;
+		--spacing-giga:      54rem;
+		--spacing-tera:      78rem;
+
+    /*========================= */
+	/* = FONT-SIZE */
+	/*========================= */
+		--font-miniature:  10px;
+		--font-shortest:   12px;
+		--font-shorter:    14px;
+		--font-short:      15px;
+		--font-current:    16px;
+		--font-tall:       21px;
+		--font-taller:     28px;
+		--font-tallest:    38px;
+		--font-huge:       46px;
+		--font-huger:      80px;
+		--font-hugest:     80px;
+		--font-giant:      120px;
+    /*========================= */
+	/* = LINE-HEIGHT */
+	/*========================= */
+    --line-height-perfect:      1em;
+    --line-height-compressed:   1.0em;
+    --line-height-tightest:     1.26875em;
+    --line-height-tighter:      1.62875em;
+    --line-height-tight:        1.74285em;
+    --line-height-normal:       2.375em;
+    --line-height-loose:        3.6em;
+    --line-height-looser:       4.2em;
+    --line-height-loosest:      5.0em;
+} 
+
+
+/* règles générales */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.5;
+    font-weight: 100;
+}
+
+body {
+    background-color: var(--jaunePale);
+    display: flex;
+    flex-direction: column;
+}
+header h1{
+    padding-top:35px;
+}
+main> *+*{
+    margin-top: 60px;
+}
+h1{
+    text-align: center;
+    color:rgb(0, 15, 4);
+    font-size: 2em;
+    padding-bottom: 35px;
+} 
+a {
+    text-decoration: none;
+}
+
+img{
+    object-fit: cover;
+}
+select{
+    display: flex;
+    margin-top: 25px;
+    padding:20px;
+    margin: 0 auto;
+
+    max-width: 500px;
+    color:rgb(0, 15, 4);
+    background-color: var(--jauneMoinsPale);
+    border:1px solid rgb(0, 15, 4);
+    border-radius: 15px;
+
+    text-align: center;
+    font-size: large;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+
+    gap:30px;
+    padding-top: 35px;
+    padding-bottom:35px;
+
+    background-color: var(--vertFonce);
+    color:var(--jaunePale);
+    
+}
+footer>small{
+    display: flex;
+    justify-content:center;
+    align-self: center;
+}
+@media screen and (max-width:800px) {
+    h1{
+        font-size: var(--font-tall);
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    main> *+*{
+        margin-top: 30px;
+    }
+    footer{
+        padding-top: 5px;
+    }
+    select{
+        max-width:80%;
+    }
+}

@@ -1,0 +1,33 @@
+
+.bouton {
+    max-width: max-content;
+    padding: 15px 20px;
+
+    border: 1px solid var(--jaunePale) ;
+    border-radius: 35px;
+    color:  var(--jaunePale);
+    background-color:var(--vertFonce);   
+}
+
+.bouton:hover{
+    transition-duration: 300ms;
+    color:  rgb(0, 15, 4);
+    border-radius: 10px;
+    background-color:var(--jaunePale);
+    border: 1px solid rgb(0, 15, 4) ;
+}
+.bouton.billetterie:hover{
+    border-radius: 35px;
+    text-decoration: none;
+}
+.bouton.beige{
+    background-color:var(--jaunePale);
+    color:  var(--vertFonce);
+    border: 2px solid var(--vertFonce);
+}
+@media screen and (max-width:800px){
+    .bouton{
+        padding:10px 15px;
+    }
+}
+

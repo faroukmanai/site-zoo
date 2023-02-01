@@ -1,0 +1,136 @@
+nav :is(a,span) {
+    display: block;
+    padding: 5px;
+}
+/* menu-deroulant.css */
+/*menu - mobile (apparait quand on clique*/
+@media (max-width:800px) {
+    .nav-menu{
+        flex-direction: column;
+        /* margin-top:10px;   */
+    }
+    .menu-deroulant > div{
+        padding-left:25px;
+        color: var(--vertFonce);
+    }
+    nav{
+        position:fixed;
+        background-color:var(--vertFonce); 
+        inset:0;
+        overflow-y:auto;
+        padding:20px;
+        display: none;
+    } 
+    nav,nav a{
+        color: var(--jaunePale); 
+    }
+    input.gachette-menu-mobile{
+        position:fixed;
+        z-index:3;
+        top:20px;
+        right: 20px;
+        appearance: none;
+        padding:5px;
+        font-size:20px;
+        background-color: var(--jauneBrun);
+        line-height:1;
+        border-radius: 5px;
+    } 
+    input.gachette-menu-mobile::after{
+        content:"☰";
+    }
+    input.gachette-menu-mobile:checked::after{
+        content:"x";
+        padding:5.25px;
+    }
+    input.gachette-menu-mobile:checked~nav{
+        display:block;
+        max-height:max-content;
+        z-index:2;
+    }
+    nav .billetterie{
+        display:none;
+    }
+    
+    
+}
+@media (min-width:800px){ 
+    nav{
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+
+        gap: 20px;
+        padding:20px;
+
+        background-color: var(--vertFonce);
+        color:  var(--jaunePale);
+        text-transform: uppercase; 
+        
+    }
+    nav a{
+        color:  var(--jaunePale);
+    }
+    .nav-menu{
+        display: flex;
+        gap:20px
+    }
+    .menu-deroulant{
+        position:relative;
+        z-index: 1;
+    }
+    .menu-deroulant > div{
+        position:absolute;
+        width:max-content;
+        max-width: 16ch;
+        top:100%;
+        transition: opacity 200ms linear; 
+        background-color:var(--vertFonce);
+        color:  var(--jaunePale);  
+    }
+
+    .menu-deroulant:not(:hover) > div{
+        opacity: 0;
+        translate:0 -8px;
+        pointer-events: none;
+    }
+    input.gachette-menu-mobile{
+        display: none;
+    }
+
+}
+
+/* navigation footer */
+.nav{
+    display:flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-top:20px;
+}
+.nav a{
+    color: var(--jaunePale) ;
+}
+.nav-menu.en-bas{ 
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}
+@media only screen and (max-width: 1300px) {
+   .nav{
+        flex-direction: column;
+    }
+    .nav {
+    align-items: center;
+    }
+ 
+    nav .logo,.nav .logo{
+       display: none; 
+    }
+    .nav-menu.en-bas{
+        text-align: center;
+        border-bottom: 1px solid grey;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        margin-top:10px;
+    }    
+}

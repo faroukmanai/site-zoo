@@ -1,0 +1,8 @@
+J'ai ajouté deux pages comme il a été indiqué dans la scenarisation.
+- 90% du contenu se trouve dans des composantes que j'ai déjà crée dans le tp2.
+- le seul ajout est une composante que j'ai nommé (article-image-paragraphes). Qui comporte comme son l'indique une photo et 3 paragraphes.
+-Pas d'ajout de sections pour les nouvelles pages.
+- j'ai gardé la meme type de code pour être coherent au maximum.
+- Le code est validé par validator.w3.org et inpecté avec wave.
+
+En attendant le cours de la 3eme session de UX/UI. Un grand merci pour ton aide. Je sens que je m'améliore avec le temps

@@ -1,0 +1,29 @@
+/* Carousel faite avec swiperjs */
+.swiper {
+    width: 450px;
+    height: 450px;
+    background:var(--jauneMoinsPale);
+    color:var(--vertFonce);
+    border-radius: 25px;
+  }
+  .swiper-slide {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align:center;  
+  }
+  .swiper-slide p{
+    max-width:30ch;
+        
+  }
+  .swiper-button-next,.swiper-button-prev{
+    color:var(--vertFonce);
+  }
+  @media screen and (max-width:450px){
+    .swiper{
+      max-width:300px;
+    }
+  }
+  

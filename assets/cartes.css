@@ -1,0 +1,141 @@
+/* en apprendre plus sur le zoo */
+/* cartes-article */
+.cartes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    justify-content: center; 
+    margin-bottom: 40px;
+}
+.carte-article{
+    position: relative;
+    background-color: var(--jauneMoinsPale);
+    padding: 15px 15px 30px 15px;
+    border-radius: 20px; 
+}
+.carte-article>img {
+    width: 400px;
+    height: 350px;
+    border-radius: 20px;   
+}
+.carte-article h3 {
+    text-align: left;
+    max-width: 400px;
+    font-weight: 100;
+    font-size: 1.5em;
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+.carte-article .cercle{
+    width: 60px;
+	height: 60px;
+	border-radius: 50%;
+    
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--jaunePale);
+    font-size: 10px;
+    font-weight: bold;
+    transform: rotate(20deg);
+}
+.carte-article .cercle-couleur{
+    background-color:rgb(4, 54, 16);
+}
+.carte-article .texte-image-cercle{
+    position: absolute;
+	left: 100%;
+	top: 0;
+	translate: -60% -40%;
+}
+.carte-article .cercle:hover{
+    animation-name: changement-de-couleur;
+    animation-duration: 4s;
+}
+.carte-article p{
+    padding-bottom: 35px;
+    max-width:350px;
+}
+@keyframes changement-de-couleur {
+    from {
+        background-color: var(--vertFonce);  
+        color:  var(--jaunePale);
+    }
+    to {
+        background-color:  var(--jaunePale);   
+        color: var(--vertFonce);
+    }
+  }
+  
+/* carte */
+
+.carte {
+    display: flex;   
+    gap: 25px;
+
+    padding: 10px;
+    max-width: 625px;
+    border-radius: 10px;
+    
+    background-color: rgb(219, 213, 213);
+    box-shadow: -2px 6px 14px 1px rgba(0,0,0,0.27);
+}
+.carte img{
+    max-width: 200px;
+    max-height:200px;
+    border-radius: 50%;
+}
+
+.carte-description{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    align-items:flex;
+    justify-content: flex-start; 
+    align-self: center;
+}
+.carte-description p {
+    max-width: max-content;
+    padding-right:25px;
+}
+.carte-description a{
+    text-decoration: underline ;
+    color: var(--bleuNoir);
+}
+@media screen and (max-width:550px){
+    .cartes-container {
+        gap:10px;
+    }
+    .carte-article{
+        max-width:300px;  
+        padding: 15px 10px;
+    }
+    .carte-article>img {
+        max-width: 300px;
+        height: 300px;   
+    }
+    
+    .carte-article h3 {
+        max-width:350px;
+    }
+
+    .carte-article .cercle{
+      display:none;
+    }
+    .carte{
+        flex-direction: column;
+    }
+    .carte>img {
+        max-width: 300px;
+        height: 300px;
+        border-radius: 10px;   
+    }
+    .carte p{
+        max-width:25ch;
+    }
+
+}
+

@@ -1,0 +1,56 @@
+.grille{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: var(--jaunePale);
+}
+.grille-liens {
+    display: flex;
+    gap: 55px;
+    justify-content: center;
+    
+    text-align: center;
+    margin-left: 25px;
+    margin-right: 25px;
+    text-decoration: none;
+}
+
+.grille-liens>a {
+    text-align: center;
+    align-self: center;
+
+    font-size: 1.6em; 
+    color:var(--vertFonce);
+    font-weight: 400;
+
+    max-width: 25ch;
+    padding-bottom: 30px;
+    padding-top: 30px;   
+}
+
+.grille-liens>a:hover {
+    transition-duration: 800ms;
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 900px) {
+    .grille{
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .grille h1{
+        padding-bottom: 5px;
+    }
+    .grille-liens{
+        flex-direction: column;
+        gap:5px;
+    }
+    hr{
+        display: none;
+    }
+    .grille-liens>a {
+        border-bottom: 1px solid grey;
+        font-size: var(--font-current);
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+}
